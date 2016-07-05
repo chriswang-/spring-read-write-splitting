@@ -1,6 +1,11 @@
 ## spring mybatis database read write splitting
 
+基于spring事务，用于mybatis，实现读写分离。完全基于配置文件，无侵入。
 
+- 只读事务到从库
+- 读写事务到主库
+
+### 引入maven依赖
 
 ### 数据源配置
 ```
