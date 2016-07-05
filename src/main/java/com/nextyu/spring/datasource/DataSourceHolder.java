@@ -7,6 +7,10 @@ package com.nextyu.spring.datasource;
  */
 public class DataSourceHolder {
 
+    private static final String MASTER = "master";
+
+    private static final String SLAVE = "slave";
+
     /**
      * dataSource master or slave
      */
@@ -19,6 +23,20 @@ public class DataSourceHolder {
 
     public static String getDataSource() {
         return dataSource.get();
+    }
+
+    /**
+     * 标志为master
+     */
+    public static void setMaster() {
+        setDataSource(MASTER);
+    }
+
+    /**
+     * 标志为slave
+     */
+    public static void setSlave() {
+        setDataSource(SLAVE);
     }
 
     /**
